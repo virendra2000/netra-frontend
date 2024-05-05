@@ -1,0 +1,43 @@
+.strength {
+    text-align: left;
+    height: 15px;
+    text-transform: capitalize;
+    color: #868b94;
+    font-weight: bold;
+}
+.bars {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 6px;
+    border-radius: 3px;
+    background: #181919;
+}
+.bars div {
+    height: 6px;
+    border-radius: 3px;
+    transition: 0.4s;
+    width: 0%;
+}
+.bars.Weak div {
+    background: #e24c71;
+    width: 33.33%;
+}
+.bars.Weak ~ .strength {
+    color: #e24c71;
+}
+.bars.Medium div {
+    background: #f39845;
+    width: 66.66%;
+}
+.bars.Medium ~ .strength {
+    color: #f39845;
+}
+.bars.Strong div {
+    background: #57c558;
+    width: 100%;
+}
+.bars.Strong ~ .strength {
+    color: #57c558;
+}
